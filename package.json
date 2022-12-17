@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.0.3",
   "packageManager": "pnpm@7.17.1",
-  "description": "",
+  "description": "Greek Tax ID, Greek Social Security Number, and Greek Postal Code validators",
   "author": "treboryx",
   "license": "MIT",
   "funding": "https://github.com/sponsors/treboryx",
