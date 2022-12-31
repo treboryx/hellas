@@ -1,7 +1,7 @@
 {
   "name": "hellas",
   "type": "module",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "packageManager": "pnpm@7.17.1",
   "description": "Greek Tax ID, Greek Social Security Number, and Greek Postal Code validators",
   "author": "treboryx",
