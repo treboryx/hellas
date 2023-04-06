@@ -85,3 +85,21 @@ export const luhnChecksumValidate = (
 
   return sum % digits.length === 0;
 };
+
+export const addPrefixForMobile = (number: string): string => {
+  const pregix = "+30";
+  const cleanedNumber = number.replace(/[\s\-()\.]/g, "");
+
+  // Check if the phone number starts with the Greek international prefix or '0030'
+  if (cleanedNumber.startsWith(pregix) || cleanedNumber.startsWith("0030")) {
+    return cleanedNumber;
+  }
+
+  // If the phone number starts with '69' (mobile), add the international prefix
+  if (cleanedNumber.startsWith("69")) {
+    return pregix + cleanedNumber;
+  }
+
+  // If the phone number doesn't match the expected formats, return the original phone number
+  return number;
+};

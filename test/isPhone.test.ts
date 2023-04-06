@@ -20,4 +20,8 @@ describe.concurrent("isPhone", () => {
   it("00302101234567", () => {
     expect(isPhone("00302101234567")).toBe(true);
   });
+
+  it("00302101234567", () => {
+    expect(isPhone("00302101234567", "mobile")).toBe(false);
+  });
 });
