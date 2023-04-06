@@ -20,7 +20,7 @@ const dict = [
  * @param {string} Plate Greek Vehicle Plate
  * @return {boolean} If it's valid or not
  */
-export default (value: string) => {
+export default (value: string): boolean => {
   const [prefix, number] = value.split("-");
   if (!prefix || !number) return false;
   if (number.length < 3) return false;

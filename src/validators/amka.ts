@@ -11,7 +11,7 @@ import {
  * @param {string} AMKA Greek social security number - AMKA
  * @return {boolean} If it's valid or not
  */
-export default (value: string) => {
+export default (value: string): boolean => {
   // Must be atleast 11 digits
   if (value.length !== 11 || isNaN(+value)) return false;
   // get dd / mm / yy
@@ -23,5 +23,3 @@ export default (value: string) => {
   // if all checks pass, it's a valid AMKA
   return true;
 };
-
-// TODO: test 00000000000

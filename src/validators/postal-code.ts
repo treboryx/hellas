@@ -3,7 +3,7 @@
  * @param {string} Code Greek Postal Code
  * @return {boolean} If it's valid or not
  */
-export default (value: string) => {
+export default (value: string): boolean => {
   // must be 5 digits
   // must not start with 0 or 9
   if (

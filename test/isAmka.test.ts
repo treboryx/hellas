@@ -12,4 +12,8 @@ describe.concurrent("isAmka", () => {
   it("16099001234", () => {
     expect(isAmka("16099001234")).toBe(false);
   });
+
+  it("00000000000", () => {
+    expect(isAmka("00000000000")).toBe(false);
+  });
 });

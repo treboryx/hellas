@@ -56,6 +56,16 @@ import { isVehiclePlate } from "hellas";
 isVehiclePlate("ΧΑΟ-2222"); // true
 ```
 
+## isPhone
+
+Greek Phone Number Validator (mobile & landline)
+
+```js
+import { isPhone } from "hellas";
+
+isPhone("+30 694 123 4567"); // true
+```
+
 ## License
 
 [MIT](./LICENSE) License © 2022 [Robert](https://github.com/treboryx)
