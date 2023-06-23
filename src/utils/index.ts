@@ -103,3 +103,98 @@ export const addPrefixForMobile = (number: string): string => {
   // If the phone number doesn't match the expected formats, return the original phone number
   return number;
 };
+
+/**
+ * Converts Greek text to Greeklish (Greek text written with Latin characters)
+ * @param {string} text Greek text to be converted
+ * @return {string} Converted Greeklish text
+ */
+export const greeklish = (text: string): string => {
+  const letters: { [key: string]: string } = {
+    Ά: "A",
+    Α: "A",
+    ά: "a",
+    α: "a",
+    Β: "B",
+    β: "b",
+    Γ: "G",
+    γ: "g",
+    Δ: "D",
+    δ: "d",
+    Έ: "E",
+    Ε: "E",
+    έ: "e",
+    ε: "e",
+    Ζ: "Z",
+    ζ: "z",
+    Ή: "H",
+    Η: "H",
+    ή: "h",
+    η: "h",
+    Θ: "Th",
+    θ: "th",
+    Ί: "I",
+    Ι: "I",
+    ί: "i",
+    ι: "i",
+    ΐ: "i",
+    ϊ: "i",
+    Κ: "K",
+    κ: "k",
+    Λ: "L",
+    λ: "l",
+    Μ: "M",
+    μ: "m",
+    Ν: "N",
+    ν: "n",
+    Ξ: "X",
+    ξ: "x",
+    Ό: "O",
+    Ο: "O",
+    ό: "o",
+    ο: "o",
+    Π: "P",
+    π: "p",
+    Ρ: "R",
+    ρ: "r",
+    Σ: "S",
+    σ: "s",
+    ς: "s",
+    Τ: "T",
+    τ: "t",
+    Ύ: "Y",
+    Υ: "Y",
+    ύ: "y",
+    υ: "y",
+    ΰ: "y",
+    ϋ: "y",
+    Φ: "F",
+    φ: "f",
+    Χ: "Ch",
+    χ: "ch",
+    Ψ: "Ps",
+    ψ: "ps",
+    Ώ: "O",
+    Ω: "O",
+    ώ: "o",
+    ω: "o",
+  };
+
+  // Check if the text contains any Greek characters
+  const regex = /[Α-ώ]/;
+  if (!regex.test(text)) {
+    return text;
+  }
+
+  let result = "";
+
+  for (const character of text) {
+    if (letters.hasOwnProperty(character)) {
+      result += letters[character];
+    } else {
+      result += character;
+    }
+  }
+
+  return result;
+};
